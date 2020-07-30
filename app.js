@@ -1,4 +1,4 @@
-// $(document).ready(fucntion () {
+$(document).ready(function() {
 
 // save function
 $('.saveBtn').click(function () {
@@ -53,24 +53,16 @@ let currentIndex = hours.indexOf(parseInt(currentTime))
 
 // Determines if times are in the past, present, or future
 for (let i = 0; i < hours.length; i++) {
+
+
   if (i < currentIndex) {
-    $(`#hour-${hours[i]}`).addClass('past')
+    $(`#text${hours[i]}`).addClass('past')
   } else if (i > currentIndex) {
-    $(`#hour-${hours[i]}`).addClass('future')
+    $(`#text${hours[i]}`).addClass('future')
   } else {
-    $(`#hour-${hours[i]}`).addClass('present')
+    $(`#text${hours[i]}`).addClass('present')
   }
 }
 
-  // $('.saveBtn').click(() => {
-  //   console.log('save')
-  //   plan.push($('#4'.value))
-  //   console.log
-  //   localStorage.setItem('plan', JSON.stringify(plan))
-  //   console.log(plan)
-  // })
 
-
-
-
-// })
+})
